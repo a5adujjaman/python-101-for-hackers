@@ -1,0 +1,2 @@
+name = "neut"
+print(name)
