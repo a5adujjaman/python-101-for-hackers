@@ -47,7 +47,7 @@ print(string3.upper())
 print(string3.lower())
 
 
-messy_string = " Messy, String"
+messy_string = "Messy, String"
 
 print(messy_string)
 print(messy_string.strip())
@@ -57,3 +57,20 @@ print(messy_string.replace("!", "?").strip())
 
 print(messy_string.split(","))
 print(messy_string.split())
+
+string4 = "I am a string!"
+print(string4)
+print(string4.encode())
+
+#in python3 all strings are represented as unicode
+
+print(string4.encode("utf-8"))
+
+#right justification
+
+print(string4.rjust(25))
+print(string4.rjust(25,"X"))
+
+#left justification
+print(string4.ljust(25))
+print(string4.ljust(25,"X"))
