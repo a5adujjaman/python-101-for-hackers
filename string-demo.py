@@ -66,11 +66,47 @@ print(string4.encode())
 
 print(string4.encode("utf-8"))
 
-#right justification
+#right justification of the string
 
 print(string4.rjust(25))
 print(string4.rjust(25,"X"))
 
-#left justification
+#left justification of  string
+
+#we have to know python string are immutable(that mean cannot be change after it create)
+
 print(string4.ljust(25))
 print(string4.ljust(25,"X"))
+
+
+print("I am " + "a srting")
+print("string4 is " + str(len(string4)) + " characters long")
+print(1+1)
+print("1" + "1")
+print(type("1" + "1"))
+
+
+print("string4 is {} characters long" .format(len(string4)))
+print("{} {} {}".format(len(string4), 5.0, 0x12))
+
+print("{0} {2} {1}".format(len(string4), 5.0, 0x12))
+print("{length}".format(length=len(string4)))
+
+
+length = len(string4)
+print(f"string4 is {length} characters long")
+
+#for different floating numbers
+print("string4 is {length:.2f} characters long".format(length=len(string4)))
+print("string4 is {length:.5f} characters long".format(length=len(string4)))
+print("string4 is {length:.7f} characters long".format(length=len(string4)))
+
+#for hex binary octal
+print("string4 is {length:x} characters long".format(length=len(string4)))
+print("string4 is {length:b} characters long".format(length=len(string4)))
+print("string4 is {length:o} characters long".format(length=len(string4)))
+
+also by this
+print("string4 is %d characters long!" % len(string4))
+print("string4 is %f characters long!" % len(string4))
+print("string4 is %x characters long!" % len(string4))
