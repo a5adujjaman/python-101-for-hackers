@@ -18,7 +18,7 @@ Name_length = 5
 print(name_length)
 print(Name_length)
 
-#list data type
+#list data type . 
 
 name_list = ["neut", "247CTF", "asd"]
 print(type(name_list))
