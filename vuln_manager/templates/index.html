@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vulnerability Manager</title>
+</head>
+<body>
+  <h1>🛡️ Add Host Data</h1>
+  <form method="POST" action="/add">
+    IP: <input name="ip" required>
+    Port: <input name="port">
+    CVE: <input name="cve">
+    Severity: 
+    <select name="severity">
+      <option>low</option>
+      <option>medium</option>
+      <option>high</option>
+    </select>
+    Description: <input name="desc">
+    <button type="submit">Add</button>
+  </form>
+
+  <h2>🖥️ Current Hosts</h2>
+  <ul>
+    {% for ip, info in data.items() %}
+      <li><b>{{ ip }}</b> — Ports: {{ info.ports }} — CVEs: {{ info.vulnerabilities|length }}</li>
+    {% endfor %}
+  </ul>
+
+  <a href="/report">📄 View Full Report</a>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Report</title>
+</head>
+<body>
+  <h1>📄 Vulnerability Report</h1>
+  {% for ip, info in data.items() %}
+    <h3>{{ ip }}</h3>
+    <p><b>Ports:</b> {{ info.ports }}</p>
+    {% if info.vulnerabilities %}
+      <ul>
+        {% for vuln in info.vulnerabilities %}
+          <li>{{ vuln.cve }} ({{ vuln.severity }}): {{ vuln.description }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No vulnerabilities.</p>
+    {% endif %}
+  {% endfor %}
+</body>
+</html>
+
